@@ -23,7 +23,7 @@ function checkRE() {
 </script>
 
 <style>
-    .found { color: #F60; }
+    .found { color: #e01abe; }
 </style>
 
 <body>
@@ -32,7 +32,7 @@ function checkRE() {
 <p>
 Pattern <input type=text id=pat  style="width:90px" onKeyUp="checkRE()">
 &emsp; <select id=menu onChange="setValues()">
-<option>Letter<option>Number<option>Suffix<option>x+letter<option> all numbers and letters<option>non-word character 
+<option>Letter<option>Number<option>Suffix<option>x+letter<option> starts with number<option>non-word character 
 </select> 
 </p><p>
 Input <input type=text id=inp  style="width:250px" onKeyUp="checkRE()">
@@ -46,10 +46,10 @@ Input <input type=text id=inp  style="width:250px" onKeyUp="checkRE()">
 <p>Ref: <a href="https://emrahtema.github.io/Automata/regexp/EmrahTema_Regexp.html" target="ExternalDocument">Term project by Emrah Tema</a></p>
 
 <script>
-    const ppp = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]","[A-Za-z0-9]","[^A-Za-z0-9_]"];
+    const ppp = ["[a-z]", "[0-9]{4}", "d[iuü][km]", "x[a-z]"," [0-9][A-z0-9]*","[^A-Za-z0-9_]"];
     const word = 
          ["Bir iki üç dört beş altı ", "Bugün 23/6/2018 saat 14",
-          "Geldim gördüm buldum...", "Excellent expression tax ","Au7*/tom*a2ta 3theory"," 2Fatih ??sultan M#e&hmet 3Vakif Uni."];
+          "Geldim gördüm buldum...", "Excellent expression tax ","Fatih 7sultan Mehme1t 1Vak2if Uni."," 2Fatih ??sultan M#e&hmet 3Vakif Uni."];
     sample.innerText = setValues.toString()+"\n"+checkRE.toString();
     title.innerText = document.title; setValues();
 </script>
