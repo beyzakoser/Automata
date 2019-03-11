@@ -4,6 +4,6 @@ Automata
 <br>
 
 # HW
-[HW1](https://beyzakoser.github.io/Automata/HW.html)
+
 <br>
 
