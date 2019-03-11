@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Regular Expressions </title>
+
+    <style>
+    /* pre { border: solid 1px } */
+
+    #inp { width: 400px; height: 200px; border: double;}
+ 
+    .found { color: #3c55c2; }
+    .found2{color: #f31c0e;}
+</style>
+</head>
+
+<body>
+    <h2 id=title></h2>
+    <p>
+        Input : 
+    </p>
+
+    <textarea id=inp type=text rows="5"; onkeyup="checkRE()" >let longString = "This is a very long string which needs " ;
+var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+var fruits = ["Apple", "Banana", "Orange"];
+var years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+ </textarea> 
+    >
+
+    <br>
+     <p>
+        output : 
+    </p>
+    
+
+
+    <pre id=out></pre>
+
+    <hr />
+    <b>Sample code</b>
+    <pre id=sample></pre>
+    <hr />
+
+
+    <script>
+        "use script";
+
+
+        function checkRE() {
+   
+            const exp = new RegExp(/\[[^\]]*\]/,'g');
+            const exp2 = new RegExp(/\"[A-Za-z0-9 ]+\"|\'[A-Za-z0-9 ]+\'/,'g');
+            const mavi = "<span class=found>$&</span>";
+            const kirmizi = "<span class=found2>$&</span>";
+            if ( inp.value) {
+    
+			   out.innerHTML = inp.value.replace(exp, kirmizi).replace(exp2, mavi);
+			   
+           }
+       }
+       sample.innerText = checkRE.toString();
+       title.innerText = document.title; checkRE();
+
+   </script>
+
+</body>
+</html>
