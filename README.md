@@ -22,5 +22,6 @@ Automata
 # HW
 
 <li>
+ <strong>RegExp</strong>
 <a href= "https://beyzakoser.github.io/Automata/HW.html">HW1</a>
 </li>
