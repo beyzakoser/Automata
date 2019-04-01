@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title> DFA for (1|0)*0 </title>
+
+<script>
+"use strict";
+function delta(q, c) { // (1|0)*0
+    if (q=='A' && c=='0') return 'B'
+    if ( q== 'B' && c=='0') return 'C'
+    if (q== 'C' && c=='0') return 'C'
+    if ( c=='1') return 'B' 
+    return '';  //default -- no transition
+}
+function accept(w, F='C', q='A') {
+    //w: input String
+    //F: final state(s)
+    //q: current state
+    let i = 0, txt = q
+    while (i < w.length) {
+        q = delta(q, w[i])
+        if (q == '') break
+        i++; txt += " -> "+q
+    }
+    input.selectionStart = i
+    input.selectionEnd = i+1
+    let a = (q!='' && F.includes(q))
+    return txt+'  '+(a? "Accept" : "Reject")
+}
+function test() {
+    let w = input.value, s = "  "
+    for (let c of w) s += c+"    "
+    s += '\n'+accept(w, final.value)
+    console.log(s); out.innerHTML = s
+}
+</script>
+</head>
+
+<body>
+
+<h2 id=title></h2>
+
+<p>Deterministic finite automation</p>
+
+w = <input id=input type=text value=01001010
+  onChange="test()"> &emsp;
+F = <input id=final type=text value=C
+  onChange="test()">
+
+<pre id=out></pre>
+
+<hr />
+<b>Logic</b>
+
+<style>
+    table { 
+        border-collapse: collapse; 
+        margin: 0 50px; 
+    }
+    th { 
+        color: blue; 
+        padding: 5px 12px; 
+    }
+    td { 
+        border: 1px solid blue; 
+        padding: 5px 12px; 
+        text-align: center; 
+    }
+    #final {
+        width: 4em;
+    }
+</style>
+<table>
+<tr><th></th><th>0</th><th>1</th></tr>
+<tr><th>> A</th><td>B</td><td>B</td></tr>
+<tr><th> B</th><td>C</td><td>B</td></tr>
+<tr><th>&emsp;*C</th><td>C</td><td>B</td></tr>
+</table>
+
+<pre id=sample></pre>
+
+<hr />
+<!--p>Ref: <a href="https:xxx" 
+   target="ExternalDocument">xxx</a>
+</p-->
+
+<script>
+    title.innerText = document.title
+    sample.innerText = delta + '\n' + accept
+    test()
+</script>
+
+</body>
+</html>
