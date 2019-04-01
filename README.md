@@ -1,5 +1,7 @@
 Automata
 # CW
+[CW1](https://beyzakoser.github.io/Automata/cw1.png)
+<br>
 [CW2](https://beyzakoser.github.io/Automata/cw2.html)
 <br>
 [CW3](https://beyzakoser.github.io/Automata/regularExp.html)
