@@ -14,6 +14,6 @@ Automata
 <br>
 
 <li>
-CW4
+<strong>CW4</strong>
 <a href= "https://beyzakoser.github.io/Automata/cw4.html">RegExp</a>
 </li>
