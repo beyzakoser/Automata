@@ -13,3 +13,7 @@ Automata
 [HW1](https://beyzakoser.github.io/Automata/HW.html)
 <br>
 
+<li>
+CW4
+<a href= "https://beyzakoser.github.io/Automata/cw4.html">RegExp</a>
+</li>
