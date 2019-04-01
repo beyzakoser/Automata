@@ -1,6 +1,6 @@
 Automata
 # CW
-[CW1](https://beyzakoser.github.io/Automata/cw1.png)
+[CW1](https://beyzakoser.github.io/Automata/cw1.html)
 <br>
 [CW2](https://beyzakoser.github.io/Automata/cw2.html)
 <br>
