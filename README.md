@@ -13,6 +13,10 @@ Automata
  
 <li><strong>CW4</strong>
  <a href= "https://beyzakoser.github.io/Automata/cw4.html">Palindrome</a></li>
+  
+<li><strong>CW5</strong>
+ <a href= "https://beyzakoser.github.io/Automata/cw5/Expression.html">Cw5</a></li>
+
  
 
 # HW
