@@ -25,3 +25,7 @@ Automata
  <strong>HW1</strong>
 <a href= "https://beyzakoser.github.io/Automata/HW.html">RegExp</a>
 </li>
+<li>
+ <strong>HW2</strong>
+<a href= "https://beyzakoser.github.io/Automata/HW2/Expression.html">Expression Parser</a>
+</li>
