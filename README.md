@@ -16,6 +16,10 @@ Automata
   
 <li><strong>CW5</strong>
  <a href= "https://beyzakoser.github.io/Automata/cw5/Expression.html">Recursive-descent Parser</a></li>
+ 
+ <li><strong>CW6</strong>
+ <a href= "https://beyzakoser.github.io/Automata/CW6.html">PDA</a></li>
+
 
  
 
