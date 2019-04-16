@@ -19,6 +19,9 @@ Automata
  
  <li><strong>CW6</strong>
  <a href= "https://beyzakoser.github.io/Automata/CW6.html">PDA</a></li>
+ 
+  <li><strong>CW7</strong>
+ <a href= "https://beyzakoser.github.io/Automata/CW7/microJ3.html">MicroJ</a></li>
 
 
  
