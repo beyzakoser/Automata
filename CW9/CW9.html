@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>NFA ->DFA </title>
+
+	<style>
+
+	#pat { width: 90px; }
+	#inp { width: 250px; }
+	.found { color: #F60; }
+
+    body  { background: #f2efef}
+
+</style>
+</head>
+
+<body>
+	<h2 id=title></h2>
+
+	<p>
+		<style>
+
+		table { 
+			border-collapse: collapse; 
+			margin: 0 50px; 
+		}
+		th { 
+			color: red; 
+			padding: 5px 12px; 
+		}
+		td { 
+			border: 1px solid black; 
+			padding: 5px 12px; 
+			text-align: center; 
+		}
+		.butonlar{
+
+			position: absolute; 
+			left: 10px;
+			top: 10px
+
+		}
+		.previous{
+			position: absolute; 
+			left: 10px;
+			top: 100px
+		}
+		.next{
+			position: absolute; 
+			left: 120px;
+			top: 100px
+		}
+		.reset{
+			position: absolute; 
+			left: 230px;
+			top: 98px
+
+		}
+
+
+		#baslik {
+			background:#a3a1a1;
+			width: 150px;
+			height: 100px
+			animation: baslik 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+			animation: baslik 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+		}
+
+		@keyframes baslik {
+			100% {
+				transform: rotateX(0);
+				transform: rotateX(0);
+			}
+			0% {
+				transform: rotateX(-180deg);
+				transform: rotateX(-180deg);
+			}
+		}
+		@keyframes baslik{
+			100% {
+				transform: rotateX(0);
+				transform: rotateX(0);
+			}
+			0% {
+				transform: rotateX(-180deg);
+				transform: rotateX(-180deg);
+			}
+		}
+
+
+	</style>
+	<div id="baslik"  style="width: 160px; height:30px; font-weight: bold; padding-top: 15px;padding-left:10px;border-radius: 5px">  Convert NFA->DFA </div>
+	<br>
+	Regex :<select id=menu onChange="setValues()">
+		<option>(01+010)*<option>""
+		</select> 
+	</p>
+	<div class="butonlar" >
+		<div class="previous" id="previous"> <input type="image"  src="previous.png" onclick="geri()"width="100px" height="100px"></div>
+
+		<div class="next" id="next"> <input type="image"  src="next.png" onclick="ileri()"width="100px" height="100px"></div>
+		<div class="reset" id="reset"> <input type="image"  src="reset.png" onclick="reset()"width="100px" height="100px"></div>
+	</div>
+
+
+	<br><br><br><br><br>
+	<p id=out></p>
+
+
+
+
+	<h3>NFA</h3>
+
+
+	<img src="nfa.png" alt="nfa" style="width: 270px; height: 200px;" />
+
+	<br>
+
+	<hr />
+	<h3>DFA</h3>
+	<br>
+
+	<div class="ileri" id="ileri" > </div>
+
+
+
+	<script type="text/javascript">
+		"use strict";
+		function ileri(){
+			document.getElementById("ileri").innerHTML = '<img src="1.png"  width="220" height="130">'
+		}
+		function reset(){
+			document.getElementById("ileri").innerHTML = ''
+		}
+	</script>
+
+</body>
+</html>
