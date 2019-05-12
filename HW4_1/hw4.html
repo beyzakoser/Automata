@@ -6,24 +6,15 @@
   <title>NFA ->DFA </title>
 
   <style>
-
-  #pat { width: 90px; }
-  #inp { width: 250px; }
-  .found { color: #F60; }
  
 html{
-  	    background: url("arkaplan12.png") no-repeat center center fixed; 
+  	 background: url("arkaplan12.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
     
-  
-
-
-  	
-
 </style>
 </head>
 
@@ -282,9 +273,9 @@ html{
         const list8=['B','ϕ','ϕ','AC','AB','ϕ','B','AC'] /*içi nfa*/
 
 
-    	    	 if(menu.value=='(0+1)*1(0+1)'){
-    	 	document.getElementById("ileriNfa").innerHTML = '<img src="Example2/ex2.png"  width="350" height="250" >'
-    	 	    let row = "<th></th>";
+    if(menu.value=='(0+1)*1(0+1)'){
+    document.getElementById("ileriNfa").innerHTML = '<img src="Example2/ex2.png"  width="350" height="250" >'
+    let row = "<th></th>";
     row += "<th>"+"0"+"</th>";
     row += "<th>"+"1"+"</th>";
     let text = "<tr>"+row+"</tr>";
@@ -302,108 +293,115 @@ html{
     function setValues(){
     	 if(menu.value=='(0+1)*1(0+1)'){
     	 	document.getElementById("ileriNfa").innerHTML = '<img src="Example2/ex2.png"  width="350" height="250" >'
-    	 	    let row = "<th></th>";
-    row += "<th>"+"0"+"</th>";
-    row += "<th>"+"1"+"</th>";
-    let text = "<tr>"+row+"</tr>";
-    for (let i = 0; i < list4.length/2; i++) {
-       row = "<th>"+list3[i]+"</th>";
+    	 	let row = "<th></th>";
+    		row += "<th>"+"0"+"</th>";
+   			row += "<th>"+"1"+"</th>";
+    		let text = "<tr>"+row+"</tr>";
+    		for (let i = 0; i < list4.length/2; i++) {
+       			row = "<th>"+list3[i]+"</th>";
     
-	   row +="<td>"+list4[i*2]+"</td>";
-	   row +="<td>"+list4[i*2+1]+"</td>";
-       text += "<tr>"+row+"</tr>";
+	   			row +="<td>"+list4[i*2]+"</td>";
+	   			row +="<td>"+list4[i*2+1]+"</td>";
+       			text += "<tr>"+row+"</tr>";
     }
   
-  tablo2.innerHTML=text;
+  		tablo2.innerHTML=text;
         document.getElementById("ileriDfa").innerHTML = ''
-      tablo.innerHTML=''
+     	tablo.innerHTML=''
 
 }
-else if(menu.value=='(01+010)*'){
-	document.getElementById("ileriNfa").innerHTML = '<img src="Example1/soru.png" width="250" height="200" >'
-	let row = "<th></th>";
-    row += "<th>"+"0"+"</th>";
-    row += "<th>"+"1"+"</th>";
-    let text = "<tr>"+row+"</tr>";
-    for (let i = 0; i < list8.length/2; i++) {
-       row = "<th>"+list7[i]+"</th>";
-    
-	   row +="<td>"+list8[i*2]+"</td>";
-	   row +="<td>"+list8[i*2+1]+"</td>";
-       text += "<tr>"+row+"</tr>";
-    }
-  
-  tablo2.innerHTML=text;
-        document.getElementById("ileriDfa").innerHTML = ''
-      tablo.innerHTML=''
-  
+		else if(menu.value=='(01+010)*'){
+		document.getElementById("ileriNfa").innerHTML = '<img src="Example1/soru.png" width="250" height="200" >'
+		let row = "<th></th>";
+		row += "<th>"+"0"+"</th>";
+		row += "<th>"+"1"+"</th>";
+		let text = "<tr>"+row+"</tr>";
+		for (let i = 0; i < list8.length/2; i++) {
+		   row = "<th>"+list7[i]+"</th>";
 
-}
+		   row +="<td>"+list8[i*2]+"</td>";
+		   row +="<td>"+list8[i*2+1]+"</td>";
+		   text += "<tr>"+row+"</tr>";
+		}
+
+		tablo2.innerHTML=text;
+		    document.getElementById("ileriDfa").innerHTML = ''
+		  tablo.innerHTML=''
+
+
+		}
 
 }
     function ileri(){
-    	sayac++
+    	
 	if(menu.value=='(0+1)*1(0+1)'){
-    			if(sayac<9){
-    				
-    		document.getElementById("ileriDfa").innerHTML = '<img src="Example2/'+sayac+'.png"  width="350" height="250">';
+    	if(sayac<8){
+    	sayac++			
+    	document.getElementById("ileriDfa").innerHTML = '<img src="Example2/'+sayac+'.png"  width="350" height="250">';
 
 
 
-    let row = "<th></th>";
-    row += "<th>"+"0"+"</th>";
-    row += "<th>"+"1"+"</th>";
-    let text = "<tr>"+row+"</tr>";
-    for (let i = 0; i < list.length/2; i++) {
-       row = "<th>"+list2[i]+"</th>";
-    
-	   row +="<td>"+list[i*2]+"</td>";
-	   row +="<td>"+list[i*2+1]+"</td>";
-       text += "<tr>"+row+"</tr>";
-    }
-  
-  tablo.innerHTML=text;
-    	}
+	    let row = "<th></th>";
+	    row += "<th>"+"0"+"</th>";
+	    row += "<th>"+"1"+"</th>";
+	    let text = "<tr>"+row+"</tr>";
+	    for (let i = 0; i < list.length/2; i++) {
+	       row = "<th>"+list2[i]+"</th>";
+	    
+		   row +="<td>"+list[i*2]+"</td>";
+		   row +="<td>"+list[i*2+1]+"</td>";
+	       text += "<tr>"+row+"</tr>";
+	    }
+	  
+	  tablo.innerHTML=text;
+	    	}
     	
     	}
     	else if(menu.value=='(01+010)*'){
-    		   if(sayac<7){
+    		if(sayac<6){
+    			sayac++	
     				
     		document.getElementById("ileriDfa").innerHTML = '<img src="Example1/'+sayac+'.png"  width="370" height="230">';
 
 
-    let row = "<th></th>";
-    row += "<th>"+"0"+"</th>";
-    row += "<th>"+"1"+"</th>";
-    let text = "<tr>"+row+"</tr>";
-    for (let i = 0; i < list5.length/2; i++) {
-       row = "<th>"+list6[i]+"</th>";
-    
-	   row +="<td>"+list5[i*2]+"</td>";
-	   row +="<td>"+list5[i*2+1]+"</td>";
-       text += "<tr>"+row+"</tr>";
-    }
-  
-  tablo.innerHTML=text;
-    	}
+	    let row = "<th></th>";
+	    row += "<th>"+"0"+"</th>";
+	    row += "<th>"+"1"+"</th>";
+	    let text = "<tr>"+row+"</tr>";
+	    for (let i = 0; i < list5.length/2; i++) {
+	       row = "<th>"+list6[i]+"</th>";
+	    
+		   row +="<td>"+list5[i*2]+"</td>";
+		   row +="<td>"+list5[i*2+1]+"</td>";
+	       text += "<tr>"+row+"</tr>";
+	    }
+	  
+	  tablo.innerHTML=text;
+	    	}
     	}
 
       
     }
 
     function geri(){
-    sayac--
+   
 
     	 if(menu.value=='(0+1)*1(0+1)'){
-    	 	document.getElementById("ileriNfa").innerHTML = '<img src="Example2/ex2.png"  width="350" height="250">';
+    	 
 	
-    			if(sayac<9 && sayac>0){
-    				
+    			if(sayac<9 && sayac>1){
+    			 sayac--	
     		document.getElementById("ileriDfa").innerHTML = '<img src="Example2/'+sayac+'.png"  width="350" height="250">';
     	}
     	}
+    	else if(menu.value=='(01+010)*'){
+    		
+    		if(sayac<7 && sayac>1){
+    			sayac--
+    		document.getElementById("ileriDfa").innerHTML = '<img src="Example1/'+sayac+'.png"  width="350" height="250">';
+    		}
     	
-
+}
       
     }
     function reset(){
@@ -411,10 +409,7 @@ else if(menu.value=='(01+010)*'){
       document.getElementById("ileriDfa").innerHTML = ''
       tablo.innerHTML=''
     }
-    function ekle() { 
 
-
-}
   </script>
 
 </body>
