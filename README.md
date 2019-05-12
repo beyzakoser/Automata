@@ -40,6 +40,10 @@ Automata
 <a href= "https://beyzakoser.github.io/Automata/HW2/Expression.html">Expression Parser</a>
 </li>
 <li>
- <strong>deneme</strong>
-<a href= "https://beyzakoser.github.io/Automata/deneme/hw4.html">deneme</a>
+ <strong>HW3</strong>
+<a href= "https://beyzakoser.github.io/Automata/HW3/microJ1.html">MicroJ1</a>
+</li>
+<li>
+ <strong>HW4</strong>
+<a href= "https://beyzakoser.github.io/Automata/HW4_1/hw4.html">Project</a>
 </li>
