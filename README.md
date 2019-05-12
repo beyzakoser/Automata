@@ -39,3 +39,7 @@ Automata
  <strong>HW2</strong>
 <a href= "https://beyzakoser.github.io/Automata/HW2/Expression.html">Expression Parser</a>
 </li>
+<li>
+ <strong>deneme</strong>
+<a href= "https://beyzakoser.github.io/Automata/deneme/hw4.html">deneme</a>
+</li>
