@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NFA ->DFA </title>
+
+  <style>
+
+  #pat { width: 90px; }
+  #inp { width: 250px; }
+  .found { color: #F60; }
+ 
+html{
+  	    background: url("arkaplan12.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+    
+  
+
+
+  	
+
+</style>
+</head>
+
+<body >
+  <h2 id=title></h2>
+
+  
+    <style>
+
+    table { 
+      border-collapse: collapse; 
+      margin: 0 50px; 
+    }
+    th { 
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      color: #a83324; 
+      padding: 5px 12px; 
+    }
+    td { 
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      border: 4px double black; 
+      padding: 5px 12px; 
+      text-align: center; 
+    }
+    p{ font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+
+     }
+    h3{font-family: "Trebuchet MS", Helvetica, sans-serif;
+} 
+    h1{
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      color: #a83324;
+ } 
+      .cerceve{
+      	margin: auto;
+      	
+
+     width: 900px;
+     height: 1600px;
+    padding: 30px;
+    border: 7px double black;
+    padding: 25px;
+    border-radius:10%;
+
+
+  }
+
+     .butonlar{
+
+      position: absolute; 
+      left: 250px;
+      top: 15px
+
+    }
+    .previous{
+      position: absolute; 
+      left: 10px;
+      top: 100px
+    }
+    .next{
+      position: absolute; 
+      left: 120px;
+      top: 100px
+    }
+    .reset{
+      position: absolute; 
+      left: 230px;
+      top: 100px
+
+    }
+
+
+    #baslik {
+      width:800px; 
+      height:30px;  
+      padding-top: 3px;
+      padding-left:10px;
+ 
+  
+    }
+    #dfa{
+      position: absolute;
+      top:10px;
+
+      width:800px; 
+      height:30px;  
+      padding-top: 15px;
+      padding-left:10px;
+      
+    }
+      #nfa{
+      position: absolute;
+      top:400px;
+      width:800px; 
+      height:30px;  
+      padding-top: 15px;
+      padding-left:10px;
+    }
+    #DfaNfa{
+      position: absolute;
+      top:550px;
+      width:800px; 
+      height:30px;  
+      padding-top: 15px;
+      padding-left:10px;
+
+    }
+    #ex{
+      position: absolute;
+      top:930px;
+      width:800px; 
+      height:30px;  
+      padding-top: 15px;
+      padding-left:10px;
+    }
+       #Kutu{
+       
+      position: absolute;
+      top:1120px;
+      width:800px; 
+      height:30px;  
+      padding-top: 15px;
+      padding-left:20px;
+    }
+       #Kutu2{
+      position: absolute;
+      top:1350px;
+      width:800px; 
+      height:30px;  
+      padding-top: 5px;
+      padding-left:20px;
+    }
+    #ileriNfa{
+      position: absolute;
+      top:50px;
+      left:100px;
+    }
+    #ileriDfa{
+      position: absolute;
+      top:25px;
+      left:100px;
+    }
+    #tablo2{
+      position: absolute;
+      top:40px;
+      left:550px;
+
+    }
+        #tablo{
+      position: absolute;
+      top:50px;
+      left:550px;
+
+    }
+ 
+
+  </style>
+<center>
+ <div class="cerceve" id="cerceve" >
+  <div id="dfa"  style="position:absolute;margin-top: 5px; margin-left: 10px; ">
+  	<h1> NFA to DFA </h1>
+        <h3> What is DFA? </h3>
+
+  <div id="baslik"  style="position:absolute;margin-top: 5px "> 
+
+    <p>
+   DFA is one of the classifications of Finite Automata.
+ </p>
+  <p>
+   Where each input symbol, one can determine the state to which the machine will move. As we can determine the state of the machine so, it is called a Deterministic Automaton. It can have a finite number of states. </p>
+ <p>
+   A finite state machine that accepts or rejects finite strings of symbols and can only produce a single computation of the automaton for each input string.<br>
+   A DFA can be represented by a 5-tuple (Q, ∑, δ, q0, F) where −<br>
+
+<br>Q is a finite set of states.
+<br>∑ is a finite set of symbols called the alphabet.
+<br>δ is the transition function where δ: Q × ∑ → Q
+<br>q0 is the initial state from where any input is processed (q0 ∈ Q).
+<br>F is a set of final state/states of Q (F ⊆ Q).<br>
+ </p>
+  </div></div>
+
+
+   <div id="nfa"style="position:absolute;margin-top: 5px; margin-left: 10px;" > 
+   <br> <h3>What is NFA? </h3>
+    <div id="baslik"  > 
+         <p>
+  A Non-deterministic Finite Automaton is like a deterministic finite automaton, except you have the possibility of going to more than one state from each current state.
+ </p>
+
+   </div>
+   </div>
+     <br>
+
+   <div id="DfaNfa"style="position:absolute;margin-top: 5px; margin-left: 10px;" > 
+    <h3>Difference between NFA and DFA </h3>
+    <div id="baslik"  style="position:absolute;margin-top: 5px "> 
+
+ <table> 
+<tr><th></th><th>DFA</th><th>NFA</th></tr>
+<tr><th> 0</th><td>For Every symbol of the alphabet, there is only one state transition in DFA.</td><td>We do not need to specify how does the NFA react according to some symbol.</td></tr>
+<tr><th>&emsp;1</th><td>DFA cannot use Empty String transition</td><td>NFA can use Empty String transition.</td></tr>
+<tr><th>2</th><td>DFA can be understood as one machine.</td><td>NFA can be understood as multiple little machines computing at the same time.</td></tr>
+<tr><th>3</th><td>  DFA will reject the string if it end at other than accepting state.</td><td>If all of the branches of NFA dies or rejects the string, we can say that NFA reject the string.</td></tr>
+<tr><th>4</th><td>DFA is more difficult to construct.</td><td>NFA is easier to construct.</td></tr>
+
+</table>
+
+   </div>
+   </div>
+
+  <div id="ex"style="position:absolute;margin-top: 5px; margin-left: 10px;">
+  	<h3>Examples </h3>
+  	Regex :<select id=menu  onChange="setValues()"style="width: 100px">
+    <option>(0+1)*1(0+1)<option>(01+010)*
+    </select> 
+  <div class="butonlar" >
+    <div class="previous" id="previous"> <input type="image"  src="previous.png" onclick="geri();"width="80px" height="80px"></div>
+
+    <div class="next" id="next"> <input type="image"  src="next.png" onclick="ileri();"width="80px" height="80px"></div>
+    <div class="reset" id="reset"> <input type="image"  src="reset.png" onclick="reset()"width="80px" height="80px"></div>
+  </div>
+</div>
+
+
+<div class="resimler" id="resimler">
+ <div class="Kutu" id="Kutu" >
+ <h3>NFA </h3> 
+  <div class="ileriNfa" id="ileriNfa" >
+
+</div>
+<table id="tablo2"></table></div>
+ <div class="Kutu2" id="Kutu2" >
+ <h3>DFA </h3> 
+  <div class="ileriDfa" id="ileriDfa" >
+  	
+
+</div>
+<table id="tablo"></table></div>
+</div>
+</div>
+  </center>
+  <script type="text/javascript">
+  	"use strict";
+  	let sayac=1
+  	/*ex2 */
+      	const list=['A','AB','AC','ABC','A','AB','AC','ABC'] /*içi dfa*/
+    	const list2=['>A','AB','*AC','*ABC'] /*kenarları dfa*/
+    	const list3=['>A','B','*C'] /*kenarları nfa*/
+    	const list4=['A','AB','C','C','ϕ','ϕ'] /*içi nfa*/
+    /* ex1 */
+        const list5=['B','ϕ','ϕ','AC','A','ϕ'] /*içi dfa*/
+        const list6=['>A','B','*C']/*kenarları dfa*/
+        const list7=['>*A','B','*AC','*AB'] /*kenarları nfa*/
+        const list8=['B','ϕ','ϕ','AC','AB','ϕ','B','AC'] /*içi nfa*/
+
+
+    	    	 if(menu.value=='(0+1)*1(0+1)'){
+    	 	document.getElementById("ileriNfa").innerHTML = '<img src="Example2/ex2.png"  width="350" height="250" >'
+    	 	    let row = "<th></th>";
+    row += "<th>"+"0"+"</th>";
+    row += "<th>"+"1"+"</th>";
+    let text = "<tr>"+row+"</tr>";
+    for (let i = 0; i < list4.length/2; i++) {
+       row = "<th>"+list3[i]+"</th>";
+    
+	   row +="<td>"+list4[i*2]+"</td>";
+	   row +="<td>"+list4[i*2+1]+"</td>";
+       text += "<tr>"+row+"</tr>";
+    }
+  
+  tablo2.innerHTML=text;
+}
+
+    function setValues(){
+    	 if(menu.value=='(0+1)*1(0+1)'){
+    	 	document.getElementById("ileriNfa").innerHTML = '<img src="Example2/ex2.png"  width="350" height="250" >'
+    	 	    let row = "<th></th>";
+    row += "<th>"+"0"+"</th>";
+    row += "<th>"+"1"+"</th>";
+    let text = "<tr>"+row+"</tr>";
+    for (let i = 0; i < list4.length/2; i++) {
+       row = "<th>"+list3[i]+"</th>";
+    
+	   row +="<td>"+list4[i*2]+"</td>";
+	   row +="<td>"+list4[i*2+1]+"</td>";
+       text += "<tr>"+row+"</tr>";
+    }
+  
+  tablo2.innerHTML=text;
+        document.getElementById("ileriDfa").innerHTML = ''
+      tablo.innerHTML=''
+
+}
+else if(menu.value=='(01+010)*'){
+	document.getElementById("ileriNfa").innerHTML = '<img src="Example1/soru.png" width="250" height="200" >'
+	let row = "<th></th>";
+    row += "<th>"+"0"+"</th>";
+    row += "<th>"+"1"+"</th>";
+    let text = "<tr>"+row+"</tr>";
+    for (let i = 0; i < list8.length/2; i++) {
+       row = "<th>"+list7[i]+"</th>";
+    
+	   row +="<td>"+list8[i*2]+"</td>";
+	   row +="<td>"+list8[i*2+1]+"</td>";
+       text += "<tr>"+row+"</tr>";
+    }
+  
+  tablo2.innerHTML=text;
+        document.getElementById("ileriDfa").innerHTML = ''
+      tablo.innerHTML=''
+  
+
+}
+
+}
+    function ileri(){
+    	sayac++
+	if(menu.value=='(0+1)*1(0+1)'){
+    			if(sayac<9){
+    				
+    		document.getElementById("ileriDfa").innerHTML = '<img src="Example2/'+sayac+'.png"  width="350" height="250">';
+
+
+
+    let row = "<th></th>";
+    row += "<th>"+"0"+"</th>";
+    row += "<th>"+"1"+"</th>";
+    let text = "<tr>"+row+"</tr>";
+    for (let i = 0; i < list.length/2; i++) {
+       row = "<th>"+list2[i]+"</th>";
+    
+	   row +="<td>"+list[i*2]+"</td>";
+	   row +="<td>"+list[i*2+1]+"</td>";
+       text += "<tr>"+row+"</tr>";
+    }
+  
+  tablo.innerHTML=text;
+    	}
+    	
+    	}
+    	else if(menu.value=='(01+010)*'){
+    		   if(sayac<7){
+    				
+    		document.getElementById("ileriDfa").innerHTML = '<img src="Example1/'+sayac+'.png"  width="370" height="230">';
+
+
+    let row = "<th></th>";
+    row += "<th>"+"0"+"</th>";
+    row += "<th>"+"1"+"</th>";
+    let text = "<tr>"+row+"</tr>";
+    for (let i = 0; i < list5.length/2; i++) {
+       row = "<th>"+list6[i]+"</th>";
+    
+	   row +="<td>"+list5[i*2]+"</td>";
+	   row +="<td>"+list5[i*2+1]+"</td>";
+       text += "<tr>"+row+"</tr>";
+    }
+  
+  tablo.innerHTML=text;
+    	}
+    	}
+
+      
+    }
+
+    function geri(){
+    sayac--
+
+    	 if(menu.value=='(0+1)*1(0+1)'){
+    	 	document.getElementById("ileriNfa").innerHTML = '<img src="Example2/ex2.png"  width="350" height="250">';
+	
+    			if(sayac<9 && sayac>0){
+    				
+    		document.getElementById("ileriDfa").innerHTML = '<img src="Example2/'+sayac+'.png"  width="350" height="250">';
+    	}
+    	}
+    	
+
+      
+    }
+    function reset(){
+    	sayac=1
+      document.getElementById("ileriDfa").innerHTML = ''
+      tablo.innerHTML=''
+    }
+    function ekle() { 
+
+
+}
+  </script>
+
+</body>
+</html>
