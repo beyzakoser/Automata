@@ -47,3 +47,9 @@ Automata
  <strong>HW4</strong>
 <a href= "https://beyzakoser.github.io/Automata/HW4_1/hw4.html">Project</a>
 </li>
+
+# Project
+<li>
+ <strong>Project</strong>
+<a href= "https://beyzakoser.github.io/Automata/Project/NfaToDfa.html">NFA to DFA Conversion</a>
+</li>
